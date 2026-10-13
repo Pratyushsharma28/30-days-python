@@ -19,5 +19,6 @@ if withdrawl_amount <= 0:
 if withdrawl_amount > 0 and withdrawl_amount % 100 != 0:
     print("Rejected amount should be in multiple of 100")
 if withdrawl_amount > 0 and withdrawl_amount > Bank_balance:
-    print("Rejected withdrawl amount must be less that bank balance")
-"hello"
+    print(" Insufficient balance")
+if withdrawl_amount > 0 and withdrawl_amount % 100 == 0 and withdrawl_amount < Bank_balance:
+    print("Transaction successful")
