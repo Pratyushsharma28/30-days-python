@@ -21,11 +21,19 @@ rating = float(input("enter rating (out of 10):"))
 attendance = float(input("enter attendance percentage:"))
 if experience >= 3 and rating >= 8 and attendance >= 90:
     print("Bonus Eligible")
+if experience < 3 and rating < 8 and attendance < 90:
+    print("Bonus not Eligible")
 if experience >= 5 and rating >=9:
     print("Promotion Eligible")
+if experience < 5 and rating < 9:
+    print("Promotion not Eligible")
 if experience >= 9:
     print("High Performer")
+if experience < 9:
+    print("Not a High Performer")
 if annual_salary > 1000000:
     print("High Salary Band")
+if annual_salary < 1000000:
+    print("Not a High Salary Band")
  
  
