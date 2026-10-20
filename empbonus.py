@@ -17,15 +17,20 @@ Tricky condition: An employee has 12 years of experience but a rating of 3.2.
 Task: Accept salary, experience, and rating; calculate the bonus amount and promotion status. Validate all inputs."""
 
 salary = int(input("Enter salary:"))
-experience = int(input("Enter experience:"))
+experience = float(input("Enter experience:"))
 rating = float(input("Enter rating:"))
+Bonus = 0
 if experience >= 10 and rating >= 4.5:
-    print("25% Bonus and Promotion")
+    Bonus = 25
 elif experience >=10 and rating >= 3.5:
-    print("15% Bonus and Promotion")
+    Bonus = 15
 elif experience >= 5 and rating >= 4.0:
-    print("12% Bonus ")
+    Bonus = 12
 elif experience < 5 and rating >= 4.5:
-    print("8% Bonus")
+    Bonus = 8 
 else:
-    print("No Bonus")
+    Bonus = 0    
+Bonus_amount = salary * Bonus/100
+Total_salary = salary + Bonus_amount
+print("Total salary including Bonus",Total_salary)
+print("Bonus amount",Bonus_amount)
