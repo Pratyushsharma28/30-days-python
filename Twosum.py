@@ -5,6 +5,7 @@ then the smallest first index, or None if no pair exists, without sorting."""
 def two_sum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
+            # Check whether the two values add up to target
             if nums[i] + nums[j] == target:
                 return (i, j)
 
